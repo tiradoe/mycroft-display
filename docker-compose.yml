@@ -9,6 +9,7 @@ services:
     network_mode: "host"
     ports:
       - "5000:5000"
+      - "5500:5500"
     working_dir: /code
     volumes:
       - ./:/code:z

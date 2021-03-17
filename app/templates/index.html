@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mycroft React</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <div id="app">
+      [[ message ]]
+      <calendar />
+    </div>
+  </body>
+
+  <script src="{{ url_for('static', filename='js/lib/vue.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</html>
