@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mycroft React</title>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <div id="app">[[ message ]]</div>
+  </body>
+
+  <script src="{{ url_for('static', filename='js/vue.js') }}"></script>
+  <script>
+    const vm = new Vue({
+      el: "#app",
+      delimiters: ["[[", "]]"],
+      data: {
+        message: "Welcome to Mycroft",
+      },
+    });
+  </script>
+</html>

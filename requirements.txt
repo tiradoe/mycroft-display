@@ -1,0 +1,4 @@
+Flask
+msk
+python-dotenv
+livereload
