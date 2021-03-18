@@ -1,5 +1,4 @@
 Flask
 mycroft-messagebus-client
 python-dotenv
-eventlet
 flask-socketio
