@@ -1,0 +1,11 @@
+.day-of-month {
+  font-size: 3em;
+  display: block;
+}
+
+.date {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2em;
+}

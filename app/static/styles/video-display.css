@@ -1,0 +1,10 @@
+.video-display {
+  display: inline-block;
+  position: relative;
+  left: 5em;
+  z-index: 10;
+}
+
+video {
+  height: 100vh;
+}

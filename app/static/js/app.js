@@ -1,16 +1,11 @@
-Vue.component("calendar", {
-  data: function () {
-    return {
-      message: "calendar!",
-    };
-  },
-  template: `<h1>It's a {{message}}</h1>`,
-});
+import ContentWindow from "./components/ContentWindow.js";
 
 new Vue({
   el: "#app",
-  delimiters: ["[[", "]]"],
-  data: {
-    message: "Welcome to Mycroft",
+  template: `
+    <ContentWindow display="test"></ContentWindow>
+  `,
+  components: {
+    ContentWindow,
   },
 });

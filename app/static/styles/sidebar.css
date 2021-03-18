@@ -1,0 +1,8 @@
+.sidebar {
+  background-color: #373795;
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  width: 30%;
+  z-index: 500;
+}
