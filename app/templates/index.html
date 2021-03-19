@@ -33,17 +33,6 @@
     ></script>
   </head>
   <body>
-    <script type="text/javascript">
-      var socket = io();
-
-      socket.on("connect", function () {
-        console.log("connected!");
-      });
-
-      socket.on("weather", function (msg) {
-        console.log("weather skill: ", msg);
-      });
-    </script>
     <div id="app"></div>
   </body>
 

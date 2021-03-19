@@ -1,6 +1,6 @@
 from mycroft_bus_client import MessageBusClient, Message
 from flask_socketio import SocketIO, emit
-from flask import Flask, render_template, copy_current_request_context
+from flask import Flask, render_template
 
 
 def start_mycroft_client():

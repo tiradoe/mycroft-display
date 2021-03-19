@@ -1,18 +1,17 @@
-import Sidebar from "./Sidebar.js";
-import VideoDisplay from "./VideoDisplay.js";
+import DefaultDisplay from "./DefaultDisplay.js";
+import Weather from "./Weather.js";
 
 const ContentWindow = Vue.component("content-window", {
   template: `
     <div class="content-container">
-      <Sidebar :class="display"></Sidebar>
-      <VideoDisplay></VideoDisplay>
+      <component v-bind:is="currentComponent"></component>
     </div>
   `,
   components: {
-    Sidebar,
-    VideoDisplay,
+    DefaultDisplay,
+    Weather,
   },
-  props: ["display"],
+  props: ["currentComponent"],
 });
 
 export default ContentWindow;
