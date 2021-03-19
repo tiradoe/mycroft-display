@@ -26,6 +26,10 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='styles/content-window.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/weather.css') }}"
+    />
     <script
       src="https://cdn.socket.io/3.1.3/socket.io.min.js"
       integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
@@ -33,6 +37,7 @@
     ></script>
   </head>
   <body>
+    <div id="owmkey" class="hidden">{{ owmkey }}</div>
     <div id="app"></div>
   </body>
 

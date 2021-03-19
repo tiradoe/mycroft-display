@@ -1,0 +1,64 @@
+h1 {
+  margin: 0;
+}
+
+#today-stats {
+  display: block;
+}
+
+.content-container {
+  background-color: #329adb;
+}
+
+.current {
+  font-size: 5em;
+  left: 7.5em;
+  position: absolute;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.forecast-item {
+  border: solid white 2px;
+  display: inline-block;
+  margin: 1em;
+  padding: 1em;
+}
+
+.forecast-item > span:first-child {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.min-max {
+  display: block;
+  margin: 1em;
+  font-size: 1.3em;
+}
+
+.today-description {
+  position: relative;
+  bottom: 2em;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.today-temp {
+  display: inline-block;
+}
+
+.weather-widget {
+  color: white;
+  padding: 1em;
+}
+
+.weather-icon {
+  min-height: 100px;
+  min-width: 100px;
+}
+
+#owmkey {
+  display: none;
+}

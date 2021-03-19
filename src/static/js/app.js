@@ -5,21 +5,23 @@ new Vue({
   data: function () {
     return {
       display: "default-display",
+      componentData: {},
     };
   },
   template: `
-    <ContentWindow :currentComponent="display"></ContentWindow>
+    <ContentWindow :currentComponent="display" :componentData="componentData"></ContentWindow>
   `,
   components: {
     ContentWindow,
   },
   methods: {
     handleWeather: function (msg) {
-      console.log("weather skill: ", msg);
       this.display = "weather";
+      this.componentData = msg.data;
 
       setTimeout(() => {
         this.display = "default-display";
+        this.componentData = {};
       }, 15000);
     },
   },
