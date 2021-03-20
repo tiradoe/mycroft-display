@@ -13,10 +13,16 @@ def start_mycroft_client():
 
 
 def handle_utterance(message):
-    skill_name = message.data.get('meta').get('skill')
-    skill_data = message.data.get('meta').get('data')
+    skill_meta = message.data.get('meta')
+    skill_name = skill_meta.get('skill')
+    skill_data = skill_meta.get('data')
+    print("message data: ", message.data)
 
-    if skill_name == "WeatherSkill":
+    if skill_name == 'MycroftPersonality' and skill_meta.get('dialog') == 'darn.browns':
+        socketio.emit('browns', {'skill': skill_name,
+                      'game_result': skill_data.get('game_result')})
+
+    if skill_name == 'WeatherSkill':
         socketio.emit('weather', {'skill': skill_name, 'data': skill_data})
 
 
@@ -30,7 +36,7 @@ start_mycroft_client()
 
 @app.route('/')
 def index():
-    return render_template("index.html", owmkey=os.environ.get('WEATHER_API_KEY'))
+    return render_template('index.html', owmkey=os.environ.get('WEATHER_API_KEY'))
 
 
 if __name__ == '__main__':

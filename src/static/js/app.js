@@ -15,10 +15,17 @@ new Vue({
     ContentWindow,
   },
   methods: {
+    handleBrowns: function (msg) {
+      this.display = "browns";
+      this.componentData = msg.game_result;
+      this.resetDisplay();
+    },
     handleWeather: function (msg) {
       this.display = "weather";
       this.componentData = msg.data;
-
+      this.resetDisplay();
+    },
+    resetDisplay: function () {
       setTimeout(() => {
         this.display = "default-display";
         this.componentData = {};
@@ -33,5 +40,6 @@ new Vue({
     });
 
     socket.on("weather", this.handleWeather);
+    socket.on("browns", this.handleBrowns);
   },
 });

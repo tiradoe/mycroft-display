@@ -1,5 +1,6 @@
 import DefaultDisplay from "./DefaultDisplay.js";
 import Weather from "./Weather.js";
+import Browns from "./Browns.js";
 
 const ContentWindow = Vue.component("content-window", {
   template: `
@@ -10,6 +11,7 @@ const ContentWindow = Vue.component("content-window", {
   components: {
     DefaultDisplay,
     Weather,
+    Browns,
   },
   computed: {
     currentProps: function () {
@@ -25,6 +27,10 @@ const ContentWindow = Vue.component("content-window", {
           state: state,
           temp: this.componentData.temp,
           wind: this.componentData.wind,
+        };
+      } else if (this.currentComponent === "browns") {
+        return {
+          game_result: this.componentData,
         };
       }
 
